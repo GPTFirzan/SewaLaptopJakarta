@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontak</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("LTHgVLWkZF864I7Ur"); // User ID kamu
+  })();
+</script>
+</head>
+<body>
+  <header>
+        <div class="header-content">
+          <a href="index.html" class="logo">
+            <img src="letter-s.png" alt="Logo Sewa Laptop" class="logo-img">
+        <nav>
+          <ul class="nav-menu">
+          <li><a href="index.html" class="active">HOME</a></li>
+          <li><a href="tentang-kami.html">TENTANG KAMI</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="kontak.html">KONTAK</a></li>
+          <li><a href="cara-pemesanan.html">CARA PEMESANAN</a></li>
+          </ul>
+          </nav>
+        </div>
+      </header>
+
+<section class="contact-section">
+  <div class="contact-container">
+    <h1>Hubungi Kami</h1>
+    <p>Ingin menyewa laptop atau butuh informasi lebih lanjut? Silakan hubungi kami melalui form di bawah ini atau langsung via WhatsApp.</p>
+
+    <div class="contact-grid">
+      <div class="contact-form">
+        <form id="contact-form">
+      <div class="form-group">
+    <label for="name">Nama Lengkap</label>
+    <input type="text" id="name" name="user_name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Alamat Email</label>
+        <input type="email" id="email" name="user_email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Pesan Anda</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-kirim">Kirim Pesan</button>
+    </form>
+      </div>
+
+      <div class="contact-info">
+        <h3>Informasi Kontak</h3> 
+        <p>
+          <img src="location-pin.png" alt="Alamat" class="icon"> 
+          Komp. Raya Housing Blk. J No.10, RT.006/RW.001, Jatiwaringin, Pondok Gede, Bekasi, West Java 17411
+        </p>
+        <p>
+          <img src="gmail.png" alt="Email" class="icon"> 
+          srentallaptopjakarta@gmail.com
+        </p>
+        <p>
+          <img src="logo.png" alt="WhatsApp" class="icon"> 
+          0838-7522-5596
+        </p>
+        <a href="https://wa.me/6283875225596" class="btn-wa">
+          <img src="logo.png" alt="WA" class="icon"> Hubungi via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15863.499086238535!2d106.89204796522571!3d-6.280189647330253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f39458c96cc1%3A0xbfe7f9b0892ddf17!2sRumah%20Eyangti%20Kardji!5e0!3m2!1sid!2sid!4v1749039387074!5m2!1sid!2sid" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" 
+    referreerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<footer class="footer">
+  <div class="footer-divider">
+    <hr>🖥️
+    <div class="footer-icon">
+      <i class="fas fa-info-circle"></i>
+    </div>
+    <hr>
+  </div>
+
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="letter-s.png" alt="MDM Logo">
+  </div>
+
+    <div class="footer-info">
+      <div class="footer-column">
+        <h4>Address</h4>
+        <p>Komplek Raya Housing (Molek)<br>
+        Blok J10 RT 006 RW 001 Jatiwaringin<br>
+        Pondok Gede Bekasi<br>
+        Jawa Barat ,17411</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Opening Hours</h4>
+        <p>Mon - Fri 7:30am – 6:00pm<br>
+        Saturday 8:00am – 2:00pm</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Get In Touch</h4>
+        <p>Call Us +62 83875225596<br>
+        Email Us<br>
+        suherli@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>©2025, Admin Restorations, All Rights Reserved</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_qv6rzl3", "template_46pbg97", this)
+      .then(function(response) {
+        alert("Pesan berhasil dikirim!");
+      }, function(error) {
+        alert("Gagal mengirim pesan.");
+        console.error(error);
+      });
+  });
+</script>
+
+
+</body>
+</html>
